@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Government Scheme Finder</h1>
+</header>
+
+<nav>
+<a href="dashboard.html">Home</a>
+<a href="schemes.html">Schemes</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="profile.html">Profile</a>
+<a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+<h2>Admin Panel</h2>
+
+<div class="card">
+
+<h3>Add New Scheme</h3>
+
+<input type="text" id="schemeName" placeholder="Scheme Name"><br><br>
+
+<input type="text" id="category" placeholder="Category"><br><br>
+
+<input type="text" id="benefits" placeholder="Benefits"><br><br>
+
+<input type="text" id="eligibility" placeholder="Eligibility"><br><br>
+
+<button id="addSchemeBtn">Add Scheme</button>
+<br><br>
+
+<button id="viewSchemeBtn">View All Schemes</button>
+
+<div id="schemeList"></div>
+
+</div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>

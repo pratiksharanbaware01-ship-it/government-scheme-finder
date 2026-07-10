@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Scheme Recommendation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Government Scheme Finder</h1>
+</header>
+
+<nav>
+<a href="dashboard.html">Home</a>
+<a href="schemes.html">Schemes</a>
+<a href="recommend.html">AI Recommendation</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="profile.html">Profile</a>
+<a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+<h2>AI Scheme Recommendation</h2>
+
+<div class="card">
+
+<input type="number" id="age" placeholder="Enter Age"><br><br>
+
+<select id="gender">
+<option>Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<br><br>
+
+<select id="category">
+    <option>Student</option>
+    <option>Farmer</option>
+    <option>Women</option>
+    <option>Health</option>
+    <option>Housing</option>
+</select>
+
+
+<br><br>
+
+<select id="occupation">
+<option>Select Occupation</option>
+<option>Student</option>
+<option>Farmer</option>
+<option>Employee</option>
+<option>Business</option>
+</select>
+
+<br><br>
+
+<button onclick="recommendScheme()">Recommend Scheme</button>
+
+<div id="recommendResult" class="card" style="margin-top:20px; display:none;"></div>
+</div>
+
+</div>
+
+<script src="recommend.js"></script>
+
+
+<script>
+function recommendScheme(){
+
+let age = document.getElementById("age").value;
+let gender = document.getElementById("gender").value;
+let category = document.getElementById("category").value;
+let occupation = document.getElementById("occupation").value;
+
+let result = document.getElementById("recommendResult");
+
+result.style.display = "block";
+
+result.innerHTML = `
+<h2>Recommended Scheme</h2>
+<p><b>Age:</b> ${age}</p>
+<p><b>Gender:</b> ${gender}</p>
+<p><b>Category:</b> ${category}</p>
+<p><b>Occupation:</b> ${occupation}</p>
+<p><b>Suggested Scheme:</b> ${category} Scheme</p>
+`;
+
+}
+</script>
+</body>
+</html>
