@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scheme === "") {
             alert("Please enter a scheme name.");
         } else {
-            alert("You searched for: " + scheme);
+         
         }
 
     });

@@ -105,7 +105,8 @@ console.log(data.name);
     data.name.toLowerCase().includes(search) ||
     data.category.toLowerCase().includes(search) ||
     data.benefits.toLowerCase().includes(search) ||
-    data.eligibility.toLowerCase().includes(search)
+    data.eligibility.toLowerCase().includes(search)||
+   data.state.toLowerCase().includes(search)
 ) {
 
           result.innerHTML += `
@@ -114,6 +115,7 @@ console.log(data.name);
               <p><b>Category:</b> ${data.category}</p>
               <p><b>Benefits:</b> ${data.benefits}</p>
               <p><b>Eligibility:</b> ${data.eligibility}</p>
+              <p><b>State:</b> ${data.state}</p>
             </div>
           `;
 
