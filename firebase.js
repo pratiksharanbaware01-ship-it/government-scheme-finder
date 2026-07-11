@@ -218,6 +218,7 @@ if (viewSchemeBtn) {
     <p><b>Category:</b> ${data.category}</p>
     <p><b>Benefits:</b> ${data.benefits}</p>
     <p><b>Eligibility:</b> ${data.eligibility}</p>
+<p><b>State:</b> ${data.state}</p>
 
     <button onclick="editScheme(
 '${doc.id}',
