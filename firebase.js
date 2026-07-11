@@ -101,7 +101,12 @@ if (searchBtn) {
 
         const data = doc.data();
 console.log(data.name);
-        if (data.name.toLowerCase().includes(search)) {
+        if (
+    data.name.toLowerCase().includes(search) ||
+    data.category.toLowerCase().includes(search) ||
+    data.benefits.toLowerCase().includes(search) ||
+    data.eligibility.toLowerCase().includes(search)
+) {
 
           result.innerHTML += `
             <div class="card">
