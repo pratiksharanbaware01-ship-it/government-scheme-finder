@@ -146,6 +146,7 @@ if (addSchemeBtn) {
     const category = document.getElementById("category").value;
     const benefits = document.getElementById("benefits").value;
     const eligibility = document.getElementById("eligibility").value;
+    const state = document.getElementById("state").value;
 
     try {
 
@@ -155,7 +156,8 @@ if (addSchemeBtn) {
         name,
         category,
         benefits,
-        eligibility
+        eligibility,
+         state
     });
 
     alert("Scheme Updated Successfully!");
@@ -170,7 +172,8 @@ if (addSchemeBtn) {
         name,
         category,
         benefits,
-        eligibility
+        eligibility,
+        state
     });
 
     alert("Scheme Added Successfully!");
