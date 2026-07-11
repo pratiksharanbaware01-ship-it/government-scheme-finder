@@ -87,6 +87,7 @@ const searchBtn = document.getElementById("searchBtn");
 if (searchBtn) {
 
   searchBtn.addEventListener("click", async () => {
+    console.log("Search button clicked");
 
     try {
 
@@ -102,11 +103,11 @@ if (searchBtn) {
         const data = doc.data();
 console.log(data.name);
         if (
-    data.name.toLowerCase().includes(search) ||
-    data.category.toLowerCase().includes(search) ||
-    data.benefits.toLowerCase().includes(search) ||
-    data.eligibility.toLowerCase().includes(search)||
-   data.state.toLowerCase().includes(search)
+    (data.name || "").toLowerCase().includes(search) ||
+(data.category || "").toLowerCase().includes(search) ||
+(data.benefits || "").toLowerCase().includes(search) ||
+(data.eligibility || "").toLowerCase().includes(search) ||
+(data.state || "").toLowerCase().includes(search)
 ) {
 
           result.innerHTML += `
